@@ -1,0 +1,212 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+#projects-wrapper.projects-wrapper .isotope-item {
+	margin-bottom: 15px;
+}
+.projects-filter {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+.projects-filter ul li {
+	padding: 0;
+	background: none;
+	margin: 0;
+	display: inline-block;
+}
+.projects-filter ul li:first-child {
+	padding-left: 0;
+}
+.projects-filter ul li a {
+	font-size: 14px;
+	display: inline-block;
+	padding: 7px 40px;
+	border-radius: 0;
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+	    -ms-transition: all .3s ease-in-out;
+	     -o-transition: all .3s ease-in-out;
+	        transition: all .3s ease-in-out;
+}
+.projects-filter ul li a:hover {
+	background: #666;
+}
+#projects-wrapper.projects-wrapper .project-img .project-img-extra h4 {
+	color: #A6A6A6;
+	text-transform: uppercase;
+	margin-top: 15px;
+	letter-spacing: 1px;
+}
+#projects-wrapper.projects-wrapper .project-img .project-img-extra h5 a {
+	color: #fff;
+}
+.project-item-meta {
+	background: #f8f8f8;
+	padding: 20px;
+	font-size: 12px;
+	color: #555;
+}
+.project-item-meta h4 {
+	margin: 0;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+.project-wrapper .project-img {
+	border: 1px solid #e5e5e5;
+}
+.project-nav .prev-project, .project-nav .next-project {
+	border-radius: 0;
+	width: 28px;
+	height: 30px;
+}
+.jsn-joomla-30 .item-page .page-header,
+.item-page .page-header {
+	border-bottom: 1px solid #e5e5e5;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	display: inline-block;
+	width: 100%;
+}
+.item-page .page-header h2 {
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+}
+.item-page .page-header .project-nav {
+	margin-top: -3px;
+}
+.project-wrapper .flex-direction-nav li a {
+	border-radius: 0;
+	background-color: rgba(0,0,0,.6);
+}
+.project-wrapper .project-link {
+	border-top: none;
+}
+.project-link .btn-success {
+	text-shadow: none;
+	border-radius: 0;
+	box-shadow: none;
+	border: none;
+	padding: 8px 30px;
+	border-radius: 100px;
+}
+.jsn-textstyle-business .project-link .btn-success {
+	font-family: 'PT Sans';
+	font-weight: 700;
+	letter-spacing: 2px;
+}
+#projects-wrapper.projects-wrapper .project-img:hover .project-img-extra {
+	opacity: .85;
+}
+.project-link .btn-success {
+	color: #fff;
+	-webkit-transition: all .3s ease-in-out;
+	   -moz-transition: all .3s ease-in-out;
+	    -ms-transition: all .3s ease-in-out;
+	     -o-transition: all .3s ease-in-out;
+	        transition: all .3s ease-in-out;
+}
+body.jsn-color-blue .project-link .btn-success {
+    background: #34A7C8;
+}
+body.jsn-color-red .project-link .btn-success {
+    background: #E95E53;
+}
+body.jsn-color-green .project-link .btn-success {
+    background: #40AF6F;
+}
+body.jsn-color-violet .project-link .btn-success {
+    background: #B485C7;
+}
+body.jsn-color-orange .project-link .btn-success {
+    background: #F39C12;
+}
+body.jsn-color-grey .project-link .btn-success {
+    background: #668499;
+}
+.project-link .btn-success:hover {
+	background: #666 !important;
+	color: #fff !important;
+}
+#projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon {
+	background-image: url(icon-link.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	width: 42px;
+	height: 42px;
+	border-radius: 100px;
+}
+#projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon.link-icon {
+	background-image: url(icon-globe.png);
+}
+#projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon.gallery-icon{
+	background-image: url(icon-view.png);
+}
+body.jsn-color-blue .projects-filter a.selected,
+body.jsn-color-blue .projects-filter a.selected:hover,
+body.jsn-color-blue .project-nav .prev-project:hover,
+body.jsn-color-blue .project-nav .next-project:hover,
+body.jsn-color-blue .project-wrapper .flex-direction-nav li a:hover,
+body.jsn-color-blue #projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon {
+    background-color: #34A7C8;
+}
+body.jsn-color-red .projects-filter a.selected,
+body.jsn-color-red .projects-filter a.selected:hover,
+body.jsn-color-red .project-nav .prev-project:hover,
+body.jsn-color-red .project-nav .next-project:hover,
+body.jsn-color-red .project-wrapper .flex-direction-nav li a:hover,
+body.jsn-color-red #projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon {
+    background-color: #E95E53;
+}
+body.jsn-color-green .projects-filter a.selected,
+body.jsn-color-green .projects-filter a.selected:hover,
+body.jsn-color-green .project-nav .prev-project:hover,
+body.jsn-color-green .project-nav .next-project:hover,
+body.jsn-color-green .project-wrapper .flex-direction-nav li a:hover,
+body.jsn-color-green #projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon  {
+    background-color: #40AF6F;
+}
+body.jsn-color-violet .projects-filter a.selected,
+body.jsn-color-violet .projects-filter a.selected:hover,
+body.jsn-color-violet .project-nav .prev-project:hover,
+body.jsn-color-violet .project-nav .next-project:hover,
+body.jsn-color-violet .project-wrapper .flex-direction-nav li a:hover,
+body.jsn-color-violet #projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon  {
+    background-color: #B485C7;
+}
+body.jsn-color-orange .projects-filter a.selected,
+body.jsn-color-orange .projects-filter a.selected:hover,
+body.jsn-color-orange .project-nav .prev-project:hover,
+body.jsn-color-orange .project-nav .next-project:hover,
+body.jsn-color-orange .project-wrapper .flex-direction-nav li a:hover,
+body.jsn-color-orange #projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon  {
+    background-color: #F39C12;
+}
+body.jsn-color-grey .projects-filter a.selected,
+body.jsn-color-grey .projects-filter a.selected:hover,
+body.jsn-color-grey .project-nav .prev-project:hover,
+body.jsn-color-grey .project-nav .next-project:hover,
+body.jsn-color-grey .project-wrapper .flex-direction-nav li a:hover,
+body.jsn-color-grey #projects-wrapper.projects-wrapper .project-img .project-img-extra .project-icon  {
+    background-color: #668499;
+}
+@media only screen and (max-width: 960px), (max-device-width: 960px) {
+	.projects-filter ul li {
+		margin-bottom: 8px;
+	}
+}
+@media only screen and (max-width: 640px), (max-device-width: 640px) {
+	.projects-filter ul li a {
+		padding: 7px 20px;
+		background: #e5e5e5;
+	}
+	.item-page .page-header h2 {
+		font-size: 1.8em;
+	}
+	#projects-wrapper.projects-wrapper .featured.[class*="column-"] {
+		width: 100%;
+	}
+}
+

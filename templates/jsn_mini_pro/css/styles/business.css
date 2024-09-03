@@ -1,0 +1,42 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+@import url(http://fonts.googleapis.com/css?family=PT+Sans:700,400);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
+
+body {
+	font-family: 'Open Sans',  Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h3.jsn-moduletitle,
+#jsn-gotoplink,
+.page-header,
+.subheading-category,
+#jsn-menu a,
+#jsn-menu span,
+.menu-pushmenu a,
+.componentheading,
+.contentheading,
+.link-button,
+a.readon,
+.text-dropcap p:first-child:first-letter,
+p.text-dropcap:first-child:first-letter {
+	font-family: 'PT Sans', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+}
+#jsn-menu span.jsn-menudescription {
+	font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+}
+.contentheading, .componentheading, .subheading, h3.jsn-moduletitle, .page-header {
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}

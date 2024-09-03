@@ -1,0 +1,102 @@
+/**
+* @author    JoomlaShine.com http://www.joomlashine.com
+* @copyright Copyright (C) 2008 - 2011 JoomlaShine.com. All rights reserved.
+* @license   JoomlaShine.com Proprietary License
+*/
+/* ============================== DEFAULT HTML ============================== */
+a {
+	color: #668499;
+}
+a:hover,
+a:active,
+a:focus {
+	color: #445e71;
+}
+/* ============================== LAYOUT ============================== */
+/* =============== LAYOUT - OVERALL PAGE =============== */
+/* =============== MENU - MAIN MENU =============== */
+div.jsn-modulecontainer ul.menu-mainmenu li:hover > a,
+div.jsn-modulecontainer ul.menu-mainmenu li.active > a {
+	color: #668499;
+}
+/* ============================== TYPOGRAPHY ============================== */
+/* =============== TYPOGRAPHY - LINK STYLES =============== */
+/* ----- ACTION LINK ----- */
+.link-action {
+	border-bottom: 1px solid #668499;
+}
+.link-action:hover {
+	background-color: #668499;
+}
+/* ----- HIGHTLIGHT LINK ----- */
+li.jsn-highlight a span.jsn-menutitle {
+	color: #668499;
+}
+.link-button.button-color {
+	background-color: #668499;
+}
+/* =============== TYPOGRAPHY - TABLE STYLES =============== */
+/* ----- COLOR HEADER TABLE ----- */
+table.style-colorheader thead th {
+	background-color: #a7b1b8;
+	border-right: 1px solid #88939a;
+}
+/* ----- COLOR STRIPES TABLE ----- */
+table.style-colorstripes td,
+table.style-colorstripes th {
+	border-bottom: 1px solid #7a8287;
+	border-right: 1px solid #7a8287;
+}
+table.style-colorstripes thead th {
+	background-color: #88969f;
+}
+table.style-colorstripes thead th.highlight {
+	background-color: #a7b1b8;
+}
+table.style-colorstripes tbody tr {
+	background-color: #d1d5d8;
+}
+table.style-colorstripes tbody .highlight {
+	background-color: #eaeef1;
+}
+table.style-colorstripes tbody tr.odd {
+	background-color: #b7bfc4;
+}
+table.style-colorstripes tbody tr.odd .highlight {
+	background-color: #cdd6dc;
+}
+table.style-colorstripes tbody tr:hover th,
+table.style-colorstripes tbody tr:hover td {
+	background-color: #858e93;
+}
+table.style-colorstripes tbody tr:hover .highlight {
+	background-color: #b2babf;
+}
+table.style-colorstripes tbody td,
+table.style-colorstripes tbody th {
+	border-left: none;
+	border-right: 1px solid #7a8287;
+}
+table.style-colorstripes tfoot th,
+table.style-colorstripes tfoot td {
+	background-color: #88969f;
+}
+.sectiontableheader {
+	background-color: #5f9936;
+}
+/* ----- GREY STRIPES TABLE ----- */
+table.style-greystripes thead th.highlight {
+	background-color: #a7b1b8;
+}
+/* ============================== MODULE STYLES ============================== */
+/* =============== MODULE STYLES - MODULE BOXES =============== */
+h3.jsn-moduletitle {
+	color: #668499;
+}
+/* ============================== JOOMLA! DEFAULT EXTENSIONS ============================== */
+/* =============== JOOMLA! EXTENSIONS - COM_CONTENT =============== */
+/* ----- SECTION / CATEGORY BLOG LAYOUT ----- */
+/* PAGE PAGINATION */
+ul.jsn-pagination li.navigation-page span {
+	background-color: #668499;
+}
