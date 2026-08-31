@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "jq -r '.tool_input.file_path // empty' | { read -r f; case \"$f\" in /Users/jeandelagoutte/Dev/construction-bois-commingeoise/*.html|/Users/jeandelagoutte/Dev/construction-bois-commingeoise/prestations/*.html|/Users/jeandelagoutte/Dev/construction-bois-commingeoise/societe/*.html) rel=\"${f#/Users/jeandelagoutte/Dev/construction-bois-commingeoise/}\"; sitemap=\"/Users/jeandelagoutte/Dev/construction-bois-commingeoise/sitemap.xml\"; if [ ! -f \"$sitemap\" ] || ! grep -q \"$rel\" \"$sitemap\"; then echo \"{\\\"systemMessage\\\": \\\"Rappel : ajouter $rel au sitemap.xml\\\"}\"; fi ;; esac; } 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}
