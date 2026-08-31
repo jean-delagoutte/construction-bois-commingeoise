@@ -1,19 +1,27 @@
+<!--
+  Gabarit de page CBC — variante RACINE (index.html, prestations.html, realisations.html,
+  societe.html, mentions-legales.html). Pour une page sous prestations/ ou societe/, préfixer
+  tous les chemins assets/… et les liens internes commençant par une des pages racine avec "../",
+  et retirer le préfixe pour les liens internes vers d'autres pages du même sous-dossier.
+  Remplacer chaque {{PLACEHOLDER}} avant utilisation, et marquer le bon <li> de nav comme actif
+  (aria-current="page" sur le lien, comme fait pour "Accueil" ci-dessous).
+-->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Nos prestations – CBC – Construction Bois Commingeoise</title>
-  <meta name="description" content="CBC construit votre maison à ossature bois : isolation, étanchéité EPDM, charpente et agencement intérieur en Haute-Garonne." />
-  <link rel="canonical" href="https://www.construction-bois-commingeoise.fr/prestations.html" />
+  <title>{{TITLE}} – CBC – Construction Bois Commingeoise</title>
+  <meta name="description" content="{{META_DESCRIPTION}}" />
+  <link rel="canonical" href="https://www.construction-bois-commingeoise.fr/{{PATH}}" />
 
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="fr_FR" />
   <meta property="og:site_name" content="CBC – Construction Bois Commingeoise" />
-  <meta property="og:title" content="Nos prestations – CBC" />
-  <meta property="og:description" content="Maison à ossature bois, isolation par l'extérieur, étanchéité EPDM, agencement intérieur : découvrez l'ensemble de nos prestations." />
+  <meta property="og:title" content="{{TITLE}}" />
+  <meta property="og:description" content="{{META_DESCRIPTION}}" />
   <meta property="og:image" content="https://www.construction-bois-commingeoise.fr/assets/img/hero/hero-1.jpg" />
-  <meta property="og:url" content="https://www.construction-bois-commingeoise.fr/prestations.html" />
+  <meta property="og:url" content="https://www.construction-bois-commingeoise.fr/{{PATH}}" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="any" />
@@ -31,12 +39,16 @@
         <img src="assets/img/logo.png" alt="" width="48" height="48" />
         <span class="site-logo__text">Construction Bois<span>Commingeoise</span></span>
       </a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true">☰</span> Menu</button>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">
+        <span aria-hidden="true">☰</span> Menu
+      </button>
+
       <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
         <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link" href="/">Accueil</a></li>
           <li class="main-nav__item parent">
-            <a class="main-nav__link" href="prestations.html" aria-current="page">Prestations</a>
+            <a class="main-nav__link" href="prestations.html">Prestations</a>
             <button class="main-nav__subtoggle" type="button" aria-expanded="false" aria-controls="submenu-prestations" aria-label="Afficher le sous-menu Prestations"><span aria-hidden="true">▾</span></button>
             <ul class="main-nav__submenu" id="submenu-prestations">
               <li><a class="main-nav__link" href="prestations/maison-ossature-bois.html">Maison ossature bois</a></li>
@@ -57,51 +69,20 @@
           </li>
         </ul>
       </nav>
-      <div class="header-social"><a href="https://www.facebook.com/pages/Construction-Bois-Commingeoise/1467681113521377" target="_blank" rel="noopener"><span class="visually-hidden">Facebook</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.95 2 14.66 2 11.97 2 10 3.66 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a></div>
+
+      <div class="header-social">
+        <a href="https://www.facebook.com/pages/Construction-Bois-Commingeoise/1467681113521377" target="_blank" rel="noopener"><span class="visually-hidden">Facebook</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 13.5h2.5l1-4H14v-2c0-1.03 0-2 2-2h1.5V2.14C17.17 2.1 15.95 2 14.66 2 11.97 2 10 3.66 10 6.7v2.8H7v4h3V22h4v-8.5z"/></svg></a>
+      </div>
     </div>
   </header>
 
   <main id="contenu">
     <div class="page-hero">
-      <h1>Nos prestations</h1>
+      <h1>{{H1}}</h1>
     </div>
 
-    <div class="container page-content">
-      <p class="lede">Du gros œuvre à la finition, CBC intervient à chaque étape de votre projet en bois : construction de maisons à ossature bois, extensions, isolation, étanchéité et agencement intérieur, partout en Haute-Garonne et dans le Sud-Ouest.</p>
-
-      <h2 class="visually-hidden">Nos prestations en détail</h2>
-      <div class="card-grid">
-        <a class="card" href="prestations/maison-ossature-bois.html">
-          <img src="assets/img/realisations/villeneuve-de-riviere-maison-individuelle-1.jpg" alt="Maison individuelle à ossature bois" loading="lazy" />
-          <div class="card__body">
-            <h3>Maison ossature bois</h3>
-            <p>Construction de maisons individuelles à ossature bois, sur-mesure, en bardage bois ou enduit-crépi.</p>
-          </div>
-        </a>
-        <a class="card" href="prestations/isolation-par-l-exterieur.html">
-          <img src="assets/img/welcome.jpg" alt="Chantier CBC" loading="lazy" />
-          <div class="card__body">
-            <h3>Isolation par l'extérieur</h3>
-            <p>Réduisez vos dépenses de chauffage sans perdre de surface habitable grâce à l'ITE.</p>
-          </div>
-        </a>
-        <a class="card" href="prestations/etancheite-epdm.html">
-          <img src="assets/img/realisations/saint-gaudens-chambre-des-metiers.jpg" alt="Bâtiment professionnel avec toiture plate" loading="lazy" />
-          <div class="card__body">
-            <h3>Étanchéité EPDM</h3>
-            <p>Étanchéité des toitures plates avec des membranes EPDM Firestone, durables et sans raccords.</p>
-          </div>
-        </a>
-        <a class="card" href="prestations/autres-services.html">
-          <img src="assets/img/realisations/garin-agencement-interieur.jpg" alt="Agencement intérieur bois" loading="lazy" />
-          <div class="card__body">
-            <h3>Autres services</h3>
-            <p>Charpente, zinguerie, couverture, agencement intérieur, parquet, terrasse et pergola bois.</p>
-          </div>
-        </a>
-      </div>
-
-      <p class="cta-row"><a class="btn btn-green" href="societe/contact.html">Demander un devis</a></p>
+    <div class="container page-content prose">
+      {{CONTENT}}
     </div>
   </main>
 
