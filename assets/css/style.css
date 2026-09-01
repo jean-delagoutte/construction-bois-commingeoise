@@ -126,20 +126,28 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .btn-green:hover, .btn-green:focus-visible { background: var(--color-btn-green-hover); }
 
 /* ===== 4. En-tête / navigation ===== */
-/* Comme sur le site d'origine : le header flotte, transparent, par-dessus le hero/bandeau,
-   texte gris clair -> blanc au survol (jamais de fond derrière le lien), et ne devient
-   qu'un bandeau NOIR uni (jamais blanc) qu'une fois qu'on a commencé à défiler
-   (classe .has-bg posée par assets/js/main.js). */
+/* Le fond du header est toujours sombre (texte gris clair -> blanc au survol, jamais de
+   fond derrière le lien), donc la couleur du texte ne change jamais. Seul son positionnement
+   change :
+   - pages normales : bandeau noir plein, "position: sticky" -> il occupe sa place dans le
+     flux, .page-hero qui suit n'a donc jamais besoin de compenser sa hauteur ;
+   - accueil uniquement (body.has-hero) : header transparent qui flotte par-dessus la photo
+     plein écran, comme sur le site d'origine, et devient noir uni au défilement
+     (classe .has-bg posée par assets/js/main.js). */
 .site-header {
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
+  background: #000;
+}
+body.has-hero .site-header {
+  position: fixed;
   background: transparent;
   transition: background-color var(--transition);
 }
-.site-header.has-bg { background: #000; }
+body.has-hero .site-header.has-bg { background: #000; }
 .site-header .site-logo__text { color: #fff; }
 .site-header .site-logo__text span { color: rgba(255, 255, 255, 0.65); }
 .site-header .nav-toggle { color: #fff; border-color: rgba(255, 255, 255, 0.5); }
@@ -256,11 +264,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   .main-nav { position: absolute; top: 100%; left: 0; right: 0; background: #000; display: none; }
   .main-nav.is-open { display: block; }
   .main-nav__list { flex-direction: column; align-items: stretch; padding: 12px; gap: 0; }
-  .main-nav__submenu { position: static; display: none; box-shadow: none; padding-left: 16px; }
+  /* .main-nav__item est un conteneur flex (lien + bouton ▾) : sans flex-wrap, le sous-menu
+     devenu position:static ci-dessous devient un 3e élément flex et se retrouve à droite du
+     bouton au lieu de passer à la ligne. flex-basis:100% force le sous-menu sur sa propre ligne. */
+  .main-nav__item { flex-wrap: wrap; }
+  .main-nav__submenu { position: static; flex-basis: 100%; display: none; box-shadow: none; padding-left: 24px; margin-top: 4px; }
   .main-nav__item:hover > .main-nav__submenu, .main-nav__item:focus-within > .main-nav__submenu { display: none; }
   .main-nav__item.is-open > .main-nav__submenu { display: block; }
   .main-nav__subtoggle { display: inline-flex; align-items: center; justify-content: center; }
   .header-social { display: none; }
+  /* Le header est en position:fixed et flotte par-dessus le bandeau de titre : sans marge,
+     le H1 se retrouve collé dessous. */
 }
 
 /* ===== 5. Hero / slider ===== */
@@ -421,7 +435,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* ===== 7. Onglets services ===== */
-.services-tabs { padding: 64px 0; }
+.services-tabs { padding-top: 64px; padding-bottom: 64px; }
 .services-tabs__list {
   list-style: none;
   display: flex;
@@ -480,9 +494,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: #fff;
   padding: 48px 24px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .page-hero h1 { color: #fff; margin: 0; text-transform: uppercase; letter-spacing: 3px; font-size: 1.5rem; }
-.page-content { padding: 56px 0; }
+.page-content { padding-top: 56px; padding-bottom: 56px; }
 .page-content h2 { color: var(--color-accent); font-size: 1.4rem; margin-top: 1.6em; }
 .page-content h2:first-child { margin-top: 0; }
 .page-content .lede { font-size: 1.15rem; color: var(--color-text-muted); }
@@ -636,7 +653,6 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 /* Texte long (mentions légales, présentation…) */
-.prose { max-width: 75ch; }
 .prose h2 { color: var(--color-dark-2); }
 .prose ul { color: var(--color-text-muted); }
 
